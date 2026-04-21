@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+    <h2>Complaint Dashboard</h2>
+
+    <a href="/submit">Submit Complaint</a>
+    <a href="/complaints">View Complaints</a>
+    <a href="/logout">Logout</a>
+
+</div>
+
+<!-- STATISTICS -->
+
+<div class="stats">
+
+    <div class="stat-box">
+        <h3>Total</h3>
+        <p>{{ total }}</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Pending</h3>
+        <p>{{ pending }}</p>
+    </div>
+
+    <div class="stat-box">
+        <h3>Resolved</h3>
+        <p>{{ resolved }}</p>
+    </div>
+
+</div>
+
+<!-- CHARTS -->
+
+<div class="container">
+
+    <h3>Complaints by Category</h3>
+    <canvas id="categoryChart"></canvas>
+
+    <br><br>
+
+    <h3>Sentiment Distribution</h3>
+    <div class="sentiment-chart-wrapper">
+        <canvas id="sentimentChart"></canvas>
+    </div>
+
+    <br><br>
+
+    <h3>Monthly Complaint Trend</h3>
+    <canvas id="monthlyChart"></canvas>
+
+</div>
+
+<script>
+
+/* SAFE DATA FROM FLASK */
+
+var categoryLabels = JSON.parse('{{ category_labels | default([]) | tojson | safe }}');
+var categoryCounts = JSON.parse('{{ category_counts | default([]) | tojson | safe }}');
+
+var sentimentLabels = JSON.parse('{{ sentiment_labels | default([]) | tojson | safe }}');
+var sentimentCounts = JSON.parse('{{ sentiment_counts | default([]) | tojson | safe }}');
+
+var monthLabels = JSON.parse('{{ month_labels | default([]) | tojson | safe }}');
+var monthCounts = JSON.parse('{{ month_counts | default([]) | tojson | safe }}');
+
+
+/* CATEGORY BAR CHART */
+
+new Chart(
+    document.getElementById("categoryChart"),
+    {
+        type: "bar",
+        data: {
+            labels: categoryLabels,
+            datasets: [
+                {
+                    label: "Complaints",
+                    data: categoryCounts
+                }
+            ]
+        }
+    }
+);
+
+
+/* SENTIMENT PIE CHART */
+
+new Chart(
+    document.getElementById("sentimentChart"),
+    {
+        type: "pie",
+        data: {
+            labels: sentimentLabels,
+            datasets: [
+                {
+                    data: sentimentCounts
+                }
+            ]
+        }
+    }
+);
+
+
+/* MONTHLY LINE CHART */
+
+new Chart(
+    document.getElementById("monthlyChart"),
+    {
+        type: "line",
+        data: {
+            labels: monthLabels,
+            datasets: [
+                {
+                    label: "Complaints",
+                    data: monthCounts
+                }
+            ]
+        }
+    }
+);
+
+</script>
+
+</body>
+</html>

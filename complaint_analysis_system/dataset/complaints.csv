@@ -1,0 +1,103 @@
+text,category,sentiment
+My bill amount is incorrect,Billing,Negative
+Package delivery is late,Delivery,Negative
+Product quality is excellent,Product,Positive
+Need refund immediately,Refund,Negative
+App is crashing frequently,Technical Support,Negative
+Customer service was helpful,Service,Positive
+Billing amount charged twice,Billing,Negative
+Delivery was faster than expected,Delivery,Positive
+Product stopped working after one day,Product,Negative
+Refund process was smooth,Refund,Positive
+Technical support solved my issue quickly,Technical Support,Positive
+Service response was very slow,Service,Negative
+Incorrect billing statement received,Billing,Negative
+Delivery package arrived damaged,Delivery,Negative
+Product looks exactly as described,Product,Positive
+Refund request still pending,Refund,Negative
+Unable to login to the system,Technical Support,Negative
+Customer support team was friendly,Service,Positive
+Billing details are confusing,Billing,Negative
+Delivery tracking information not updated,Delivery,Negative
+Product packaging was neat,Product,Positive
+Refund amount not credited,Billing,Negative
+Website loading very slowly,Technical Support,Negative
+Service staff resolved issue politely,Service,Positive
+Unexpected extra charges on my bill,Billing,Negative
+Delivery person was rude,Delivery,Negative
+Product quality is very poor,Product,Negative
+Refund was processed quickly,Refund,Positive
+App freezes when submitting form,Technical Support,Negative
+Service center handled complaint well,Service,Positive
+Billing system shows wrong balance,Billing,Negative
+Delivery delay without notification,Delivery,Negative
+Product exceeded my expectations,Product,Positive
+Refund request rejected unfairly,Refund,Negative
+Cannot reset my password,Technical Support,Negative
+Customer service was unhelpful,Service,Negative
+Billing invoice missing details,Billing,Negative
+Delivery arrived earlier than scheduled,Delivery,Positive
+Product design is impressive,Product,Positive
+Refund policy is unclear,Refund,Neutral
+System error appears frequently,Technical Support,Negative
+Service quality improved recently,Service,Positive
+Billing amount does not match usage,Billing,Negative
+Delivery instructions were ignored,Delivery,Negative
+Product is worth the price,Product,Positive
+Refund still not received after weeks,Refund,Negative
+Technical team resolved issue fast,Technical Support,Positive
+Service representative was impatient,Service,Negative
+Billing statement contains duplicate charges,Billing,Negative
+Delivery driver handled package carefully,Delivery,Positive
+Product stopped charging properly,Product,Negative
+Refund was delayed unnecessarily,Refund,Negative
+Application crashes on startup,Technical Support,Negative
+Service center location is convenient,Service,Positive
+Billing account suspended incorrectly,Billing,Negative
+Delivery status shows incorrect location,Delivery,Negative
+Product material feels premium,Product,Positive
+Refund process took too long,Refund,Negative
+Technical issue fixed after update,Technical Support,Positive
+Service response time was acceptable,Service,Neutral
+Billing error occurred during payment,Billing,Negative
+Delivery box was opened before arrival,Delivery,Negative
+Product color faded quickly,Product,Negative
+Refund was issued without problems,Refund,Positive
+Unable to connect to server,Technical Support,Negative
+Service agent resolved issue immediately,Service,Positive
+Billing receipt not generated,Billing,Negative
+Delivery person arrived on time,Delivery,Positive
+Product installation was easy,Product,Positive
+Refund not approved despite eligibility,Refund,Negative
+Technical support call dropped repeatedly,Technical Support,Negative
+Service team followed up regularly,Service,Positive
+Billing calculation is inaccurate,Billing,Negative
+Delivery package missing items,Delivery,Negative
+Product works perfectly,Product,Positive
+Refund confirmation email not received,Refund,Negative
+App login page not loading,Technical Support,Negative
+Service quality needs improvement,Service,Negative
+Billing cycle dates are incorrect,Billing,Negative
+Delivery took too long to arrive,Delivery,Negative
+Product arrived in good condition,Product,Positive
+Refund credited to wrong account,Billing,Negative
+Technical support unavailable on weekends,Technical Support,Negative
+Service desk provided clear instructions,Service,Positive
+Billing portal shows outdated information,Billing,Negative
+Delivery notification was helpful,Delivery,Positive
+Product battery drains quickly,Product,Negative
+Refund processed after multiple requests,Refund,Negative
+Software update caused new issues,Technical Support,Negative
+Service was average,Service,Neutral
+Billing amount higher than expected,Billing,Negative
+Delivery service was excellent,Delivery,Positive
+Product size does not match description,Product,Negative
+Refund request handled professionally,Refund,Positive
+Technical error message unclear,Technical Support,Negative
+Service representative solved problem quickly,Service,Positive
+Billing support responded late,Billing,Negative
+Delivery courier lost my package,Delivery,Negative
+Product warranty claim approved,Product,Positive
+Refund was denied without explanation,Refund,Negative
+System maintenance caused downtime,Technical Support,Negative
+Service team apologized for inconvenience,Service,Positive

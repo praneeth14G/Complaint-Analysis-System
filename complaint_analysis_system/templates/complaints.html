@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Complaints</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <style>
+        .status-pending {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .status-resolved {
+            color: #00ff9c;
+            font-weight: bold;
+        }
+
+        .resolve-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .resolve-btn:hover {
+            opacity: 0.8;
+        }
+
+        .resolved-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            background: gray;
+            color: white;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>All Complaints</h2>
+
+    <a href="/dashboard">Dashboard</a>
+    <a href="/submit">Submit Complaint</a>
+    <a href="/logout">Logout</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+{% if data and data|length > 0 %}
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>User ID</th>
+        <th>Complaint</th>
+        <th>Category</th>
+        <th>Sentiment</th>
+        <th>Keywords</th>
+        <th>Priority</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    {% for c in data %}
+    <tr>
+
+        <td>{{ c[0] }}</td>
+        <td>{{ c[1] }}</td>
+        <td>{{ c[2] }}</td>
+        <td>{{ c[3] }}</td>
+        <td>{{ c[4] }}</td>
+        <td>{{ c[5] }}</td>
+        <td>{{ c[6] }}</td>
+
+        <!-- STATUS COLUMN -->
+        <td>
+            {% if c[7] == "Pending" %}
+                <span class="status-pending">Pending</span>
+            {% else %}
+                <span class="status-resolved">Resolved</span>
+            {% endif %}
+        </td>
+
+        <td>{{ c[8] }}</td>
+
+        <!-- ACTION COLUMN -->
+        <td>
+
+            {% if c[7] == "Pending" %}
+
+            <form action="{{ url_for('resolve_complaint', complaint_id=c[0]) }}"
+                  method="POST"
+                  style="display:inline;">
+
+                <button type="submit" class="resolve-btn">
+                    Resolve
+                </button>
+
+            </form>
+
+            {% else %}
+
+            <button class="resolved-btn" disabled>
+                Resolved
+            </button>
+
+            {% endif %}
+
+        </td>
+
+    </tr>
+
+    {% endfor %}
+
+    </tbody>
+</table>
+
+{% else %}
+
+<h3>No complaints found.</h3>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>
