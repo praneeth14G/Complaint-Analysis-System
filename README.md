@@ -6,7 +6,7 @@
 
 A comprehensive NLP-powered web application for analyzing, classifying, and managing customer complaints. The system leverages machine learning and natural language processing to automatically categorize complaints, detect sentiment, and extract key insights from customer feedback.
 
-## 🎯 Features
+## Features
 
 - **User Authentication**: Secure login and registration system
 - **Complaint Classification**: Automatic categorization using TF-IDF and Logistic Regression
@@ -17,7 +17,7 @@ A comprehensive NLP-powered web application for analyzing, classifying, and mana
 - **Database Management**: Persistent data storage with SQLite
 - **Responsive UI**: Modern and user-friendly interface
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Prerequisites](#prerequisites)
 - [Project Structure](#project-structure)
@@ -31,7 +31,7 @@ A comprehensive NLP-powered web application for analyzing, classifying, and mana
 - [Contributing](#contributing)
 - [License](#license)
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed:
 
@@ -39,7 +39,7 @@ Before you begin, ensure you have the following installed:
 - pip (Python package manager)
 - Git
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 complaint_analysis_system/
@@ -63,7 +63,7 @@ complaint_analysis_system/
 └── model.pkl             # Trained ML model (generated)
 ```
 
-## 📦 Installation
+## Installation
 
 ### 1. Clone the Repository
 
@@ -107,7 +107,7 @@ This command will:
 - Train the TF-IDF vectorizer and Logistic Regression model
 - Save `model.pkl` and `vectorizer.pkl` for predictions
 
-## 🚀 Usage
+##  Usage
 
 ### Running the Application
 
@@ -132,7 +132,7 @@ http://127.0.0.1:5000
 4. **View Complaints**: See all submitted complaints with analysis
 5. **Dashboard**: View analytics and sentiment trends
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -151,7 +151,7 @@ DATABASE_URL=sqlite:///complaints.db
 - **Database**: SQLite (configurable in `database.py`)
 - **ML Model**: Trained on complaint categories
 
-## 🗄️ Database
+##  Database
 
 The application uses SQLite for data persistence. The database is automatically created on first run.
 
@@ -167,7 +167,7 @@ Initialize or reset the database:
 python -c "from database import init_db; init_db()"
 ```
 
-## 🔌 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -205,7 +205,7 @@ rm complaints.db
 python app.py
 ```
 
-## 🌐 Deployment
+## Deployment
 
 ### Deploy on Render
 
@@ -239,14 +239,14 @@ heroku open
 1. Use AWS Elastic Beanstalk
 2. Follow AWS EB deployment guide for Python Flask apps
 
-## 📊 Model Information
+## Model Information
 
 - **Vectorizer**: TF-IDF (Term Frequency-Inverse Document Frequency)
 - **Classifier**: Logistic Regression
 - **NLP Library**: spaCy 3.7.2, NLTK, TextBlob
 - **Training Data**: `dataset/complaints.csv`
 
-## 📝 Requirements
+## Requirements
 
 All dependencies are listed in `requirements.txt`:
 
@@ -258,27 +258,6 @@ All dependencies are listed in `requirements.txt`:
 - nltk==3.8.1
 - textblob==0.17.1
 
-## 🤝 Contributing
 
-Contributions are welcome! Here's how you can help:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 📧 Support
-
-For issues, questions, or suggestions, please open an [issue](https://github.com/yourusername/complaint-analysis-system/issues) on GitHub.
-
-## 🙏 Acknowledgments
-
-- Flask documentation
-- scikit-learn community
-- spaCy NLP library
-- All contributors and users
