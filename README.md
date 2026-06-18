@@ -236,8 +236,8 @@ heroku open
 
 ### Deploy on AWS
 
-1. Use AWS Elastic Beanstalk
-2. Follow AWS EB deployment guide for Python Flask apps
+1. Use AWS Elastic Beanstalk.
+2. Follow AWS EB deployment guide for Python Flask apps.
 
 ## Model Information
 
