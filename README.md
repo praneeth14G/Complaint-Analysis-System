@@ -126,11 +126,11 @@ http://127.0.0.1:5000
 
 ### Features Walkthrough
 
-1. **Register**: Create a new user account
-2. **Login**: Sign in with your credentials
-3. **Submit Complaint**: Fill out the complaint form with details
-4. **View Complaints**: See all submitted complaints with analysis
-5. **Dashboard**: View analytics and sentiment trends
+1. **Register**: Create a new user account.
+2. **Login**: Sign in with your credentials.
+3. **Submit Complaint**: Fill out the complaint form with details.
+4. **View Complaints**: See all submitted complaints with analysis.
+5. **Dashboard**: View analytics and sentiment trends.
 
 ##  Configuration
 
